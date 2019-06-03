@@ -4,9 +4,20 @@ class Curso {
 
   private $nombre;
   private $codigo;
+  private $alumnos = [];
+  private $profesorTitular;
+  private $profesorAdjunto;
+  private $capacidad;
 
 
-  public function __construct() {
+
+  // public function __construct(string $elNombre,int $elCodigo, Alumno $Alumnos) {
+  // }
+
+  public function __construct(string $elNombre,int $elCodigo, int $LaCapacidad ) {
+    $this->nombre = $elNombre;
+    $this->codigo = $elCodigo;
+    $this->capacidad =$LaCapacidad;
   }
 
   public function setNombre(string $elNombre) {
@@ -22,6 +33,15 @@ class Curso {
 
   }
 
+  public function setAlumnos(Alumno $alumno) {
+
+      $this->alumno[] = $alumno;
+
+  }
+
+
+
+
   public function getNombre() {
 
     	return $this->nombre;
@@ -34,7 +54,7 @@ class Curso {
 }
 
 public function agregarUnAlumno(Alumno $unAlumno){
-  
+
 }
 
 }

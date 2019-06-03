@@ -5,8 +5,9 @@ class Alumno {
   private $nombre;
   private $apellido;
   private $codigo;
+  
 
-  public function __construct() {
+  public function __construct(string $elNombre,string $elApellido,int $elCodigo) {
 
   }
 

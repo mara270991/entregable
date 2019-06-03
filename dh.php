@@ -8,33 +8,21 @@ require_once("profesortitular.php");
 require_once("profesoradjunto.php");
 require_once("curso.php");
 
-$Alumno = new Alumno;
-$Alumno->setNombre("juana");
-$Alumno->setApellido("vega");
-$Alumno->setCodigo(22);
+$Alumno = new Alumno("juana","juana", 22);
+$Alumno2 = new Alumno("diego","diego", 22);
 
-$ProfeT = new ProfesorTitular;
-$ProfeT->setNombre("juana");
-$ProfeT->setApellido("vega");
-$ProfeT->setCodigo(22);
-$ProfeT->setAntiguedad(45);
-$ProfeT->setEspecialidad("marketing");
+$ProfeT = new ProfesorTitular("marketing",3,2345,"nombre","apellido");
 
-$ProfeA = new ProfesorAdjunto;
-$ProfeA->setNombre("juana");
-$ProfeA->setApellido("vega");
-$ProfeA->setCodigo(22);
-$ProfeA->setAntiguedad(45);
-$ProfeA->setHoras(6);
+$ProfeA = new ProfesorAdjunto(5,2345,"nombre","apellido");
+//
+$CursoFS = new Curso("fullstack", 0045,55);
+$CursoFS->setAlumnos($Alumno2);
+$CursoFS->setAlumnos($Alumno);
 
-
-$Curso = new Curso("fullstack", 0045);
-$Curso->setNombre("fullstacj");
-$Curso->setCodigo(1556);
 
 
 
 
 echo "<pre>";
-var_dump($Alumno, $Curso, $ProfeA, $ProfeT);
+var_dump($Alumno, $ProfeA, $ProfeT,$CursoFS);
 echo "</pre>";

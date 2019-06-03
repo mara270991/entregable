@@ -4,10 +4,9 @@ abstract class  Profesor {
 
   protected $nombre;
   protected $apellido;
-  protected $antiguedad;
-  protected $codigo;
 
-  public function __construct() {
+
+  public function __construct(string $elNombre,string $elApellido) {
 
   }
 
@@ -22,17 +21,7 @@ abstract class  Profesor {
       $this->apellido = $elApellido;
   }
 
-  public function setAntiguedad(int $LaAntiguedad) {
 
-      $this->antiguedad = $LaAntiguedad;
-  }
-
-
-  public function setCodigo(int $elCodigo) {
-
-      $this->codigo = $elCodigo;
-
-  }
 
   public function getNombre() {
 
@@ -44,14 +33,8 @@ abstract class  Profesor {
       return $this->apellido;
   }
 
-  public function getAntiguedad() {
 
-      return $this->antiguedad;
-  }
 
-  public function getCodigo() {
 
-      return $this->codigo;
-}
 
 }
