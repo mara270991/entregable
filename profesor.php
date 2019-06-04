@@ -7,6 +7,8 @@ abstract class  Profesor {
 
 
   public function __construct(string $elNombre,string $elApellido) {
+    $this->nombre = $elNombre;
+    $this->apellido = $elApellido;
 
   }
 

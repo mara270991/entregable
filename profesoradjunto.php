@@ -7,7 +7,11 @@ class ProfesorAdjunto extends Profesor {
 protected $horas;
 protected $codigoAdjunto;
 
-public function __construct(int $lasHoras, int $ElCodigoAdjunto) {
+public function __construct(int $lasHoras, int $ElCodigoAdjunto, $elNombre, $elApellido) {
+  parent::__construct($elNombre, $elApellido);
+  $this->horas = $lasHoras;
+  $this->codigoAdjunto = $ElCodigoAdjunto;
+
 
 }
 

@@ -6,7 +6,12 @@ protected $especialidad;
 protected $antiguedad;
 protected $codigoTitular;
 
-public function __construct(string $laEspecialidad, int $LaAntiguedad, int $ElCodigoTitular) {
+public function __construct(string $laEspecialidad, int $LaAntiguedad, int $ElCodigoTitular, $elNombre, $elApellido) {
+  parent::__construct($elNombre, $elApellido);
+  $this->especialidad = $laEspecialidad;
+  $this->antiguedad = $LaAntiguedad;
+  $this->codigoTitular = $ElCodigoTitular;
+
 
 }
 

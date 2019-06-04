@@ -5,8 +5,8 @@ class Curso {
   private $nombre;
   private $codigo;
   private $alumnos = [];
-  private $profesorTitular;
-  private $profesorAdjunto;
+  private $profesorTitular = [];
+  private $profesorAdjunto = [];
   private $capacidad;
 
 
@@ -39,6 +39,26 @@ class Curso {
 
   }
 
+  public function setProfesoresTitulares(ProfesorTitular $profesor) {
+
+      $this->profesor[] = $profesor;
+
+  }
+
+
+    public function setProfesoresAdjuntos(ProfesorAdjunto $profesor) {
+
+        $this->profesor[] = $profesor;
+
+    }
+
+
+    public function setCapacidad($LaCapacidad) {
+
+        $this->capacidad = $LaCapacidad;
+
+    }
+
 
 
 
@@ -52,6 +72,25 @@ class Curso {
 
       return $this->codigo;
 }
+
+public function getAlumnos() {
+
+    $this->alumno[] = $alumno;
+
+}
+
+public function getProfesoresTitulares() {
+
+    $this->profesor[] = $profesor;
+
+}
+
+
+  public function getProfesoresAdjuntos() {
+
+      $this->profesor[] = $profesor;
+
+  }
 
 public function agregarUnAlumno(Alumno $unAlumno){
 
