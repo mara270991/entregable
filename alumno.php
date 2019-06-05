@@ -1,18 +1,25 @@
 <?php
+//Parte A
 
+//Punto 1
 class Alumno {
+
+  //Punto 2.a
 
   private $nombre;
   private $apellido;
   private $codigo;
 
-
+//Punto 3.a
   public function __construct(string $elNombre,string $elApellido,int $elCodigo) {
       $this->nombre = $elNombre;
       $this->apellido= $elApellido;
       $this->codigo= $elCodigo;
 
   }
+
+
+//Punto 4 y 5.a
 
   public function setNombre(string $elNombre) {
 

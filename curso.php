@@ -1,24 +1,26 @@
 <?php
+//Parte B
 
+//Punto 1 y 2.b
 class Curso {
 
   private $nombre;
   private $codigo;
-  private $alumnos;
+  private $alumnos = [];
   private $profesorTitular;
   private $profesorAdjunto;
   private $capacidad;
 
 
 
-  // public function __construct(string $elNombre,int $elCodigo, Alumno $Alumnos) {
-  // }
 
   public function __construct(string $elNombre,int $elCodigo, int $LaCapacidad ) {
     $this->nombre = $elNombre;
     $this->codigo = $elCodigo;
     $this->capacidad =$LaCapacidad;
   }
+
+  //Punto 3.b
 
   public function setNombre(string $elNombre) {
 
@@ -75,26 +77,33 @@ class Curso {
 
 public function getAlumnos() {
 
-    $this->alumno[] = $alumno;
+    //return array($this->alumnos);
+    return $this->alumnos;
+
+}
+
+public function getCapacidad() {
+
+    return $this->capacidad;
 
 }
 
 public function getProfesoresTitulares() {
 
-    $this->profesor[] = $profesor;
+    $this->profesor;
 
 }
 
 
   public function getProfesoresAdjuntos() {
 
-      $this->profesor[] = $profesor;
+      $this->profesor;
 
   }
 
 public function agregarUnAlumno(Alumno $alumno){
 
-    if ( count($this->alumnos) >= $this->capacidad) {
+    if ( count($this->getAlumnos()) >= $this->getCapacidad()) {
     echo "El cupo esta completo";
   } else { $this->setAlumnos($alumno);
 }

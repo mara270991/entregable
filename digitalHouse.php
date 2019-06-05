@@ -1,11 +1,12 @@
 <?php
-
+//Parte F
 require_once("curso.php");
 require_once("alumno.php");
 
 
 class DigitalHouseManager
 {
+  //Punto 1 y 2. f
 
   private $ListaAlumno = [];
   private $ListaProfesorTitular = [];
@@ -16,25 +17,29 @@ class DigitalHouseManager
   {
 
 }
+
+//Parte H
+
+//Punto 1.h
 public function altaCurso(string $nombre, int $codigoCurso, int $cupoMaximoDealumnos) {
  // $this->setListaCursos(new Curso($nombre, $codigoCurso, $cupoMaximoDealumnos));
  $Curso = new Curso($nombre, $codigoCurso, $cupoMaximoDealumnos);
  $this->setListaCursos($Curso);
 
 }
-
+//Punto 2.h
 public function altaProfesorAdjunto(string $nombre, string $apellido, int $codigoProfesor, int $cantidadDeHoras) {
  $ProfesorAdjunto = new ProfesorAdjunto($nombre, $apellido, $codigoProfesor, $cantidadDeHoras);
  $this->setListaProfesorAdjunto($ProfesorAdjunto);
 
 }
-
+//Punto 3.h
 public function altaProfesorTitular(string $nombre, string $apellido, int $codigoProfesor, int $especialidad) {
   $ProfesorTitular = new ProfesorTitular($nombre, $apellido, $codigoProfesor, $cantidadDeHoras);
   $this->setListaProfesorTitular($ProfesorTitular);
 
 }
-
+//Punto 4.h
 public function altaAlumno($nombre, $apellido, $codigoAlumno) {
  $Alumno = new Alumno($nombre, $codigoCurso, $cupoMaximoDealumnos);
  $this->setListaAlumno($Alumno);

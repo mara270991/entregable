@@ -1,9 +1,9 @@
 <?php
 
-
-
+//Parte D
+//Punto 1 .d
 class ProfesorAdjunto extends Profesor {
-
+//Punto 2.d
 protected $horas;
 protected $codigoAdjunto;
 
@@ -14,6 +14,7 @@ public function __construct(int $lasHoras, int $ElCodigoAdjunto, $elNombre, $elA
 
 
 }
+//Punto 3.d
 
 public function setHoras(int $lasHoras) {
 

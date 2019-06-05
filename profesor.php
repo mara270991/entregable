@@ -1,5 +1,6 @@
 <?php
-
+//Parte C
+//Punto 1 y 2 .c
 abstract class  Profesor {
 
   protected $nombre;
@@ -11,6 +12,8 @@ abstract class  Profesor {
     $this->apellido = $elApellido;
 
   }
+
+  //Punto 3 . c
 
   public function setNombre(string $elNombre) {
 
