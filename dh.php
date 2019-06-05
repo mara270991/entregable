@@ -7,26 +7,38 @@ require_once("profesor.php");
 require_once("profesortitular.php");
 require_once("profesoradjunto.php");
 require_once("curso.php");
+require_once("digitalHouse.php");
 
-$Alumno = new Alumno("juana","juana", 22);
-$Alumno2 = new Alumno("diego","diego", 22);
+$Alumno = new Alumno("Juana","Suarez", 1);
+$Alumno2 = new Alumno("Diego","Vega", 2);
+$Alumno3 = new Alumno("Rocio","Luna", 3);
 
-$ProfeT = new ProfesorTitular("marketing",3,2345,"nombre","apellido");
-$ProfeA = new ProfesorAdjunto(5,2345,"nombre","apellido");
+$ProfeT = new ProfesorTitular("FullStack",3,1,"Juan","Gonzalez");
+$ProfeT2 = new ProfesorTitular("Android",3,2,"Pedro","Rossel");
+$ProfeA = new ProfesorAdjunto(5,1,"Emiliano","Perez");
+$ProfeA2 = new ProfesorAdjunto(5,2,"Pablo","Etchegaray");
 
 //
-$CursoFS = new Curso("fullstack", 0045,55);
-$CursoFS->setAlumnos($Alumno2);
-$CursoFS->setAlumnos($Alumno);
-$CursoFS->setProfesoresTitulares($ProfeT);
-$CursoFS->setProfesoresAdjuntos($ProfeA);
-$CursoFS->setCapacidad(55);
 
 
+$Dh = new DigitalHouseManager();
+$Dh->altaCurso("FullStack", 1,5);
+$Dh->altaCurso("Android", 2,5);
 
+$Dh->setListaProfesorTitular($ProfeT);
+$Dh->setListaProfesorAdjunto($ProfeA);
+$Dh->setListaProfesorTitular($ProfeT2);
+$Dh->setListaProfesorAdjunto($ProfeA2);
+$Dh->asignarProfesores(1,1,1);
+$Dh->asignarProfesores(1,1,1);
+$Dh->asignarProfesores(2,2,2);
+$Dh->asignarProfesores(2,2,2);
+$Dh->inscribirAlumno(1,1);
+$Dh->inscribirAlumno(2,1);
+$Dh->inscribirAlumno(2,1);
 
 
 
 echo "<pre>";
-var_dump($Alumno, $ProfeA, $ProfeT,$CursoFS);
+var_dump($Dh);
 echo "</pre>";

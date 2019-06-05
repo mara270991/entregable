@@ -4,9 +4,9 @@ class Curso {
 
   private $nombre;
   private $codigo;
-  private $alumnos = [];
-  private $profesorTitular = [];
-  private $profesorAdjunto = [];
+  private $alumnos;
+  private $profesorTitular;
+  private $profesorAdjunto;
   private $capacidad;
 
 
@@ -35,20 +35,20 @@ class Curso {
 
   public function setAlumnos(Alumno $alumno) {
 
-      $this->alumno[] = $alumno;
+      $this->alumnos[] = $alumno;
 
   }
 
   public function setProfesoresTitulares(ProfesorTitular $profesor) {
 
-      $this->profesor[] = $profesor;
+      $this->profesorTitular = $profesor;
 
   }
 
 
     public function setProfesoresAdjuntos(ProfesorAdjunto $profesor) {
 
-        $this->profesor[] = $profesor;
+        $this->profesorAdjunto = $profesor;
 
     }
 
@@ -92,8 +92,12 @@ public function getProfesoresTitulares() {
 
   }
 
-public function agregarUnAlumno(Alumno $unAlumno){
+public function agregarUnAlumno(Alumno $alumno){
 
+    if ( count($this->alumnos) >= $this->capacidad) {
+    echo "El cupo esta completo";
+  } else { $this->setAlumnos($alumno);
+}
 }
 
 }
